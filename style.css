@@ -1,0 +1,28 @@
+.square{
+    
+    width: 100%;
+    background-color: red;
+
+}
+
+.square:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.container{
+    border: 5px solid blue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 960px;
+}
+.lineContainer{
+    border: 0px solid green;
+    display: flex;
+}
+
+body{
+    margin: 0px;
+}
