@@ -47,13 +47,44 @@ function resetGrid(){
             container.removeChild(child);
             child = container.lastElementChild;
         }
-        let width = prompt("quelle largeur ? (max 100)");
-        let height = prompt("quelle hauteur ? (max 100)");
+        let width = askWidth();
+        let height = askHeight();
         creatediv(height, width);
         changeColorHover();
         console.log("h")
     });
 }
+
+function askWidth(){
+    
+    let width = parseInt(prompt("quelle largeur ? (max 100)"));
+    console.log(width);
+    console.log(typeof(width));
+
+    while(!((width >= 0) && (width < 100))){
+        width = parseInt(prompt("quelle largeur ? (max 100)"));
+        console.log(width);
+        console.log(typeof(width));
+    }    
+
+    return width;
+}
+
+function askHeight(){
+    
+    let height = parseInt(prompt("quelle hauteur ? (max 100)"));
+    console.log(height);
+    console.log(typeof(height));
+
+    while(!((height >= 0) && (height < 100))){
+        height = parseInt(prompt("quelle hauteur ? (max 100)"));
+        console.log(height);
+        console.log(typeof(height));
+    }    
+
+    return height;
+}
+
 
 creatediv(16, 16);
 changeColorHover();

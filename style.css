@@ -1,7 +1,7 @@
 .square{
     
     width: 100%;
-    background-color: red;
+    background-color: white;
 
 }
 
@@ -12,7 +12,7 @@
 }
 
 .container{
-    border: 5px solid blue;
+    border: 5px solid red;
     display: flex;
     justify-content: center;
     flex-direction: column;
