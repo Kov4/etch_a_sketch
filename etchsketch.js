@@ -31,11 +31,21 @@ function changeColorHover(){
     const squares = document.querySelectorAll(".square");
 
     squares.forEach((square) => {
-        square.addEventListener('mouseover', () => {
-        square.style.cssText = "background-color: black;"    
+        square.addEventListener('mouseover', () => {         
+            let color = getRandomColor();
+            square.style.cssText = `background-color: ${color};`;    
         } );
     });
 
+}
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
 
 function resetGrid(){
@@ -84,6 +94,7 @@ function askHeight(){
 
     return height;
 }
+
 
 
 creatediv(16, 16);
